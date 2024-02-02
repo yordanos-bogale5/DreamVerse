@@ -7,15 +7,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bed Time Story App'),
+        title: const Text('Bed Time Story'),
         centerTitle: true,
       ),
       drawer: Drawer(
         child: Column(
           children: <Widget>[
             const UserAccountsDrawerHeader(
-              accountName: Text('John Doe'),
-              accountEmail: Text('johndoe@example.com'),
+              accountName: Text('Selam Tesfaye'),
+              accountEmail: Text('seli@gmail.com'),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: NetworkImage('https://example.com/avatar.jpg'),
               ),
