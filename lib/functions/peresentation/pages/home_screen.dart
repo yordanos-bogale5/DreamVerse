@@ -2,25 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'detail_story_page.dart';
-
-class NewFe extends StatelessWidget {
-  const NewFe({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Your App Title',
-      theme: ThemeData(
-        // ... your theme settings ...
-      ),
-      darkTheme: ThemeData(
-        // ... your dark theme settings ...
-      ),
-      home: const HomeScreen(),
-    );
-  }
-}
+import 'detail/stories.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -44,10 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: deprecated_member_use
     return WillPopScope(
       onWillPop: () async {
-        // Prevent going back to onboarding screen
         return false;
       },
       child: Scaffold(
@@ -64,9 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.pink,
                 size: 28.0,
               ),
-              onPressed: () {
-                // Add functionality for the music icon if needed
-              },
+              onPressed: () {},
             ),
             IconButton(
               icon: Icon(
@@ -104,15 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
               return StoryCardWithPhoto(
                 story: stories[index],
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const DetailStoryScreen(stories: []),
-                    ),
-                  );
-                  setState(() {
-                    _selectedIndex = index;
-                  });
+                  _navigateToScreen(context, index);
                 },
               );
             },
@@ -132,11 +102,51 @@ class _HomeScreenState extends State<HomeScreen> {
             setState(() {
               _selectedIndex = index;
             });
-            // Add navigation logic if needed
           },
         ),
       ),
     );
+  }
+
+  void _navigateToScreen(BuildContext context, int index) {
+    switch (index) {
+      case 0:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =>  const StoryScreen(storyTypes: [],)),
+        );
+        break;
+      case 1:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Screen2()),
+        );
+        break;
+      case 2:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Screen3()),
+        );
+        break;
+      case 3:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Screen4()),
+        );
+        break;
+      case 4:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Screen5()),
+        );
+        break;
+      case 5:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const Screen6()),
+        );
+        break;
+    }
   }
 }
 
