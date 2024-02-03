@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'detail/meditation.dart';
 import 'detail/melody_tales.dart';
+import 'detail/sleep_sounds.dart';
 import 'detail/stories.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -133,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 3:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Screen4()),
+          MaterialPageRoute(builder: (context) => const SoftSleepSoundsScreen()),
         );
         break;
       case 4:
