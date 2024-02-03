@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'detail/meditation.dart';
 import 'detail/melody_tales.dart';
+import 'detail/readind_story.dart';
 import 'detail/sleep_sounds.dart';
 import 'detail/stories.dart';
 import 'detail/story_videos.dart';
@@ -147,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 5:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Screen6()),
+          MaterialPageRoute(builder: (context) =>  const ReadingStoryScreen(stories: [],)),
         );
         break;
     }
