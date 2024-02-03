@@ -1,10 +1,10 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'detail/meditation.dart';
 import 'detail/melody_tales.dart';
-import 'detail/readind_story.dart';
+import 'detail/reading_story.dart';
 import 'detail/sleep_sounds.dart';
 import 'detail/stories.dart';
 import 'detail/story_videos.dart';
