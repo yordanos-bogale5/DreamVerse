@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'detail/meditation.dart';
 import 'detail/stories.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -119,7 +120,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Screen2()),
+          MaterialPageRoute(builder: (context) => const MeditationScreen()),
         );
         break;
       case 2:
