@@ -38,6 +38,7 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   audioplayers: ^5.2.1
   video_player: ^2.8.2
+  chewie: ^1.7.4
 
 dev_dependencies:
   flutter_test:

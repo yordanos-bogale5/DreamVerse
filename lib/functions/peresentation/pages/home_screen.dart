@@ -6,6 +6,7 @@ import 'detail/meditation.dart';
 import 'detail/melody_tales.dart';
 import 'detail/sleep_sounds.dart';
 import 'detail/stories.dart';
+import 'detail/story_videos.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -140,7 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 4:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const Screen5()),
+          MaterialPageRoute(builder: (context) =>   const StoryVideoScreen(videoUrl: '',)),
         );
         break;
       case 5:
